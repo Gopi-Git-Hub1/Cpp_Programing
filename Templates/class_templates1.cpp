@@ -5,9 +5,10 @@ class data
 {
 	public:
 		T x;
-		data(T y):x(y){};
-		void display()
+		data(T y):x(y){	cout<<x<<endl; };
+		void display(T a)
 		{
+			x = a;
 			cout<<x<<endl;
 		}
 };
@@ -18,11 +19,12 @@ int main()
 	class data <double>obj3(30.123);
 	class data <char>obj4('A');
 	class data <string>obj5("string...");
-	obj1.display();
-	obj2.display();
-	obj3.display();
-	obj4.display();
-	obj5.display();
+	cout<<"---------------------"<<endl;
+	obj1.display(10);
+	obj2.display(20.123);
+	obj3.display(30.1234);
+	obj4.display('B');
+	obj5.display("string......");
 	return 0;
 
 }
