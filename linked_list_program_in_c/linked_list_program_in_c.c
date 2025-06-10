@@ -115,7 +115,37 @@ void popDataFromEnd()
 }
 void popDataSpecificPosition()
 {
-
+	int pos;
+	int nNodes = 0;
+	var *nofNodes = head;
+	while(nofNodes != NULL){
+		nofNodes = nofNodes->next;
+		nNodes++;
+	}
+	printf("position : ");
+	scanf("%d",&pos);
+	if(pos < 1 )
+		printf("invalid position..!\n");
+	else if(pos == 1)
+		popDataFromFront();
+	else if(pos == nNodes)
+		popDataFromEnd();
+	else if(pos > nNodes )
+		printf("position is greater than number of nodes..!\n");
+	else if(pos < nNodes)
+	{
+	var *tmp1 = NULL;
+	var *tmp2 = NULL;
+	tmp1 = head;
+			for(int i =1;i<pos;i++)
+			{
+				tmp2 = tmp1;
+				tmp1=tmp1->next;
+			}
+			 tmp2->next = tmp1->next;
+			 free(tmp1);
+	printf("Node from the position %d of the list deleted successfully!!\n",pos);	
+	}
 }
 void displayData()
 {
