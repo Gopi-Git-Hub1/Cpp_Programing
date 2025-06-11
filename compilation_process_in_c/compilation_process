@@ -1,0 +1,13 @@
+/*
+ *
+ * Preprocessing  -> cc -E file.c -o preprocessing.i
+ *
+ * Compiling      -> cc -S preprocessing.i -o compiling.s
+ *
+ * Assembling     -> cc -c compiling.s -o assembling.o
+ *
+ * Linking        -> cc assembling.o -o linking
+ *
+ * ./linking
+ *
+ */
