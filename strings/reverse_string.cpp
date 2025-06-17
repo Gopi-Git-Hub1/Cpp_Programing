@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bits/stdc++.h>
 #include <cstring>
 using namespace std;
 void reverseString(char *s)
@@ -20,9 +21,11 @@ void reverseString(char *s)
 int main()
 {
 	char *str;
-	str = (char*)malloc(sizeof(char)*50);
+	string s;
 	cout<<"Enter the String : ";
-	cin>>str;
+	getline(cin,s);
+	str = (char*)malloc(sizeof(s));
+	strcpy(str, s.c_str());
 	cout<<"Normal String    : "<<str<<endl;
 	reverseString(str);
 	cout<<"Reverse String   : "<<str<<endl;
