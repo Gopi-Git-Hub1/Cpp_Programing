@@ -65,7 +65,18 @@ int main()
 		cout<<*it<<" ";
 	}
 	cout<<endl;
+	
+	auto a = find(V.begin(),V.end(),2);
 
+	cout<<"index : "<<distance(V.begin(), a)<<endl<<"element : "<<2<<endl;
+	
+	sort(V.begin(), V.end());
 
+	for(vector<int>::iterator it = V.begin(); it != V.end(); it++)
+	{
+		cout<<*it<<" ";
+	}
+	cout<<endl;
+	
 	return 0;
 }
