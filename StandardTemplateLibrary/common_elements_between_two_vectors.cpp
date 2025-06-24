@@ -20,10 +20,20 @@ int main()
 	
 	it = set_intersection(V1.begin(), V1.end(), V2.begin(), V2.end(), V.begin());
 
-	cout<<"Common elements: "<<endl;	
-	for(st = V.begin(); st != it; st++)
+	cout<<"Common elements: "<<endl;
+	vector<int>v;
+	for(st = V.begin(); st != it; st++){
 		cout<<*st<<" ";
+		v.push_back(*st);
+	}
 	cout<<endl;
+	
+	int b = *min_element(v.begin(), v.end());
+	cout<<"min : "<<b<<endl;
+	
+	auto a = minmax_element(v.begin(), v.end());
+	cout<<"min : "<<*a.first<<endl;
+	cout<<"max : "<<*a.second<<endl;
 	
 	return 0;
 }
