@@ -1,0 +1,4 @@
+The mutable storage class in C++:
+The mutable storage class is a property that gives you access to modify the non-static data members (not static data members) of a class, even when the object is declared as constant.
+This is mainly useful for scenarios where the data needs modification without affecting the logical state of the object, like caching, lazy initialization, and logging.
+
