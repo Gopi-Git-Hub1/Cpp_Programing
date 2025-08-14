@@ -1,0 +1,15 @@
+Virtual Function in C++
+
+The statement virtual void print(); is an example of a virtual function.
+
+A virtual function is a member function in a base class that can be overridden in derived classes. It is declared using the virtual keyword in the base class. Virtual functions enable runtime polymorphism, allowing the program to determine at runtime which function to invoke based on the actual type of the object, rather than the type of the pointer or reference.
+
+Key Characteristics of Virtual Functions:
+
+Declared using the virtual keyword in the base class.
+
+Allows overriding in derived classes.
+
+Resolved at runtime using late binding (or dynamic dispatch).
+
+Enables calling the derived class's implementation even when accessed through a base class pointer.
