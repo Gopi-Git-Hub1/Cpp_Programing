@@ -11,7 +11,8 @@ int main()
 	sockaddr_in clientAddress;
 	clientAddress.sin_family = AF_INET;
 	clientAddress.sin_port = htons(8080);
- 	clientAddress.sin_addr.s_addr = INADDR_ANY;
+ 	clientAddress.sin_addr.s_addr = INADDR_ANY; // inside same system localhost
+	//clientAddress.sin_addr.s_addr = inet_addr("192.168.1.20"); // other system ip
 
 	connect(clientSocket,(struct sockaddr*)&clientAddress,sizeof(clientAddress));
 
