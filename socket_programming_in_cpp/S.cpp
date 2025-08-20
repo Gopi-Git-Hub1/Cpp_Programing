@@ -11,7 +11,8 @@ int main()
 	sockaddr_in sockAddress;
 	sockAddress.sin_family = AF_INET;
 	sockAddress.sin_port   = htons(8080);
-	sockAddress.sin_addr.s_addr = INADDR_ANY;
+	sockAddress.sin_addr.s_addr = INADDR_ANY;  // inside same system localhost 
+	//sockAddress.sin_addr.s_addr = inet_addr("192.168.1.20"); // other system ip
 
 	bind(serverSocket, (struct sockaddr*)&sockAddress, sizeof(sockAddress));
 
