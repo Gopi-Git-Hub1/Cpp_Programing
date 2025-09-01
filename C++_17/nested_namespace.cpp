@@ -1,6 +1,23 @@
 #include <iostream>
 using namespace std;
 
+
+namespace X::Y::Z {
+            void greet() {
+                std::cout << "Hello from X::Y::Z\n";
+            }
+        }
+
+namespace A {
+    namespace B {
+        namespace C {
+            void greet() {
+                std::cout << "Hello from A::B::C\n";
+            }
+        }
+    }
+}
+
 // Outer namespace
 namespace outer {
 	void fun(){
@@ -21,5 +38,9 @@ int main() {
 	// namespace
 	outer::inner::func();  
 	outer::fun();
+
+	A::B::C::greet();
+	X::Y::Z::greet();
+
 	return 0;
 }
