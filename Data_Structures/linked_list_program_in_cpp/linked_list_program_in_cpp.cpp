@@ -5,7 +5,6 @@ using namespace std;
 class Data
 {
 	public:
-
 		list<int>data;
 
 		void setDataIntoFront();
@@ -69,13 +68,14 @@ void Data::popDataSpecificPosition()
 }
 void Data::displayData()
 {
-	cout<<"============================================="<<endl;
+	cout<<"==============================="<<endl;
 	for(list<int>::iterator it = data.begin(); it != data.end(); it++)
 	{
 		cout<<*it<<" ";
 	}
 	cout<<endl;
-	cout<<"============================================="<<endl;
+	cout <<"Number of items in the list: " <<data.size()<<endl;
+	cout<<"==============================="<<endl;
 }
 int main()
 {
@@ -114,11 +114,8 @@ int main()
 			case 8: exit(0);
 			default :
 				cout<<"Choose correct option...!"<<endl;
-
-
 		}
 	}
-
 	return 0;
 }
 
