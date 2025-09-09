@@ -134,10 +134,14 @@ void userCredentials::loginUser()
 	if (Credentials.find(loginUser.username) != Credentials.end()) {
 		if (Credentials[loginUser.username] == loginUser.password) {
 			cout << "Login successful!"<<endl;
-		} else {
+		} 
+		else 
+		{
 			cout << "Invalid password."<<endl;
 		}
-	} else {
+	}
+	else 
+	{
 		cout << "User not found."<<endl;
 	}
 
