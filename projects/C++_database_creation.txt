@@ -1,0 +1,17 @@
+
+CREATE USER 'gopi'@'localhost' IDENTIFIED BY 'Hanuman@8642';
+GRANT ALL PRIVILEGES ON testdb.* TO 'gopi'@'localhost';
+FLUSH PRIVILEGES;
+      (or) 
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Hanuman@8642';
+FLUSH PRIVILEGES;
+      (or)
+CREATE DATABASE testdb;
+
+USE testdb;
+
+CREATE TABLE students (id INT PRIMARY KEY,name VARCHAR(100));
+
+g++ database_creation.cpp -o database_creation -I/usr/include/cppconn -L/usr/lib/x86_64-linux-gnu/ -lmysqlcppconn
+
+./database_creation
