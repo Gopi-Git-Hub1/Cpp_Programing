@@ -12,5 +12,6 @@ int main()
 		cout<<*(ptr+i)<<" ";
 	}
 	cout<<endl;
+	delete[] ptr;
 	return 0;
 }
